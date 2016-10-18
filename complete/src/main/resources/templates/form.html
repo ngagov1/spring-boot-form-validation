@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <form action="#" th:action="@{/}" th:object="${personForm}" method="post">
+            <table>
+                <tr>
+                    <td>1.Name:</td>
+                    <td><input type="text" th:field="*{name}" /></td>
+                    <td th:errors="*{name}">Name Error</td>
+                </tr>
+                <tr>
+                    <td>2.Age:</td>
+                    <td><input type="text" th:field="*{age}" /></td>
+                    <td th:errors="*{age}">Age Error</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
